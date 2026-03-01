@@ -21,6 +21,7 @@ export default function ForgotPasswordForm() {
           id='email'
           label='Email'
           type='email'
+          name='email'
           placeholder='Enter your email'
         />
       </div>
