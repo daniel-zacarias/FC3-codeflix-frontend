@@ -20,7 +20,7 @@
   }
 }
 
-.bg-gradient-to-b {
+/* .bg-gradient-to-b {
   background-image: linear-gradient(
     to bottom,
     rgba(20, 20, 20, 0) 0,
@@ -30,7 +30,7 @@
     #141414 68%,
     #141414 100%
   );
-}
+} */
 
 body {
   @apply bg-[#141414] text-white;

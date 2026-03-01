@@ -1,41 +1,16 @@
-import Image from 'next/image';
 import Header from './components/Header';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
-import { PlayIcon } from '@heroicons/react/24/solid';
+import { Banner } from './components/Banner';
+import { MovieRow } from './components/MovieRow';
 
 export default function Home() {
   return (
-    <div className='relative h-full overflow-hidden bg-gradient-to-b lg:h-[140vh]'>
+    <div className='relative h-full bg-linear-[to_bottom,rgba(20,20,20,0)_0%,rgba(20,20,20,0.15)_15%,rgba(20,20,20,0.35)_29%,rgba(20,20,20,0.58)_44%,#141414_68%,#141414_100%] lg:h-[140vh]'>
       <Header />
       <main className='relative pb-24 pl-4 lg:pl-16'>
-        <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
-          <div className='absolute top-0 left-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>
-            <Image
-              src='/The-Witcher-Netflix-Banner-Header.jpg'
-              alt='MAID'
-              fill={true}
-              className='h-[65vh] object-cover object-top lg:h-[95vh]'
-            />
-          </div>
-          <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
-            The Witcher
-          </h1>
-          <p className='max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl'>
-            Geralt of Rivia, a solitary monster hunter, struggles to find his
-            place in a world where people often prove more wicked than beasts.
-          </p>
-        </div>
-
-        <div className='flex space-x-3'>
-          <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-80 md:px-8 md:py-3 lg:px-8 lg:py-2.5'>
-            <PlayIcon className='h-6' />
-            Play
-          </button>
-          <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-80 md:px-8 md:py-3 lg:px-8 lg:py-2.5'>
-            <InformationCircleIcon className='h-6' />
-            More Info
-          </button>
-        </div>
+        <Banner />
+        <MovieRow sectionTitle='Featured' />
+        <MovieRow sectionTitle='Top Rated' />
+        <MovieRow sectionTitle='Popular' />
       </main>
     </div>
   );
